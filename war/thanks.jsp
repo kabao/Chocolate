@@ -1,9 +1,3 @@
-<%-- 
-    Document   : thanks
-    Created on : 2013/12/09, 18:02:14
-    Author     : 
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -14,7 +8,7 @@
      <h1>輸入手続き　確認</h1>
      <h1>輸入が完了しました。</h1>   
             
-          <a href="import.jsp">ログアウト</a>
+          <a href="Welcome.jsp">ログアウト</a>
             </form>
          </div>
 </html>

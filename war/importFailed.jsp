@@ -1,9 +1,3 @@
-<%-- 
-    Document   : importFailed
-    Created on : 2013/12/09, 17:32:05
-    Author     : 
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -15,7 +9,7 @@
         <div align="center">
         <h1>世界のチョコ屋さん</h1>
         <p>
-            氏名またはパスワードNO.が間違っているため、</a>
+            氏名またはパスワードが間違っているため、</a>
             ログインできませんでした。
         </p>
         <a href="import.jsp">もう一度ログインを試す。</a>

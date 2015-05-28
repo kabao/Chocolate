@@ -1,9 +1,3 @@
-<%-- 
-    Document   : cartCheckBox
-    Created on : 2013/12/09, 17:29:18
-    Author     : 
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
