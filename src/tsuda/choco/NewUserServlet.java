@@ -60,7 +60,7 @@ public class NewUserServlet extends HttpServlet{
     	String url = request.getParameter("url");
     	
 
-        LinkData data = new LinkData(name,password,url);
+        LinkData data = new LinkData(name,password);
         PersistenceManagerFactory factory = PMF.get();
         PersistenceManager manager = factory.getPersistenceManager();
         try {
@@ -68,9 +68,9 @@ public class NewUserServlet extends HttpServlet{
         } finally {
             manager.close();
         }
-        response.sendRedirect("/NewUserOK.jsp");
+        response.sendRedirect("/index.html");
         
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/NewUserOK.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/index.html");
         dispatcher.forward(request,response);
  
     }

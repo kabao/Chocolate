@@ -7,7 +7,6 @@
     </head>
         <div align="center">
         <h1>世界のチョコ屋さんへようこそ！</h1>
-        
     <form action="import.do" method="post" class="login">
         <table>
         <h2>新規登録します</h2>
