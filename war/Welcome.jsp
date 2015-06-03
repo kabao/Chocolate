@@ -9,7 +9,7 @@
         <h1>世界のチョコ屋さんへようこそ！</h1>
         
     <form action="import.do" method="post" class="login">
-        <a href="import.jsp">ログイン</a><br>
+        <a href="/chocolate">ログイン</a><br>
        	<a href="NewUser.jsp">ユーザー登録</a>
      </form>
         </div>
