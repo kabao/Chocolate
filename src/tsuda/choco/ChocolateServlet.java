@@ -1,16 +1,43 @@
 package tsuda.choco;
 
 import java.io.*;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.http.*;
+
 import java.util.*;
+
 import javax.jdo.*;
+
+import com.google.appengine.api.users.UserService;
+import com.google.appengine.api.users.UserServiceFactory;
 
 @SuppressWarnings("serial")
 public class ChocolateServlet extends HttpServlet {
-	public void doGet(HttpServletRequest req, HttpServletResponse resp)
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
-		//resp.setContentType("text/plain");
-		//resp.getWriter().println("Hello, world");
+		UserService userService = UserServiceFactory.getUserService();
+
+        String thisURL = req.getRequestURI();
+
+        resp.setContentType("text/html");
+
+        if (req.getUserPrincipal() != null) {
+            resp.getWriter().println("<p>Welcome, " +
+                                     req.getUserPrincipal().getName() +
+                                     "!<br>  You can <a href=\"" +
+                                     userService.createLogoutURL(thisURL) +
+                                     "\">sign out</a>.</p>");
+        } else {
+            resp.getWriter().println("<p>Please <a href=\"" +
+                                     userService.createLoginURL(thisURL) +
+                                     "\">sign in</a>.</p>");
+        }
+
+        /*
+		resp.setContentType("text/plain");
+		resp.getWriter().println("Hello, world");
 		
 		PersistenceManagerFactory factory = PMF.get();
         PersistenceManager manager = factory.getPersistenceManager();
@@ -42,5 +69,7 @@ public class ChocolateServlet extends HttpServlet {
         res += "]";
         out.println(res);
         manager.close();
+        */
 	}
 }
+
