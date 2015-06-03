@@ -36,8 +36,7 @@ public class ChocolateServlet extends HttpServlet {
         String res = "[";
         if (list != null){
             for(LinkData data:list){
-                res += "{name:" + data.getName() + ",password:'" + data.getPassword() + "',url:'" +
-                    data.getUrl() + "'},";
+                res += "{name:'" + data.getName() + "',password:'" + data.getPassword() + "'},";
             }
         }
         res += "]";
