@@ -1,4 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page import="tsuda.choco.Price"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
@@ -9,24 +10,30 @@
     </head>
     <body>
         <h1>ご注文は以下の通りです。</h1>
-    <tr>　注文商品　　　　　　　　　　　　価格</tr><br>
-    <tr>-------------------------------------------------------------------------------</tr>
-    
-    
-     <form method="get" class="cart" >
-                <table class="menu">
-                    <c:forEach items="${data}" var="rec">
-                        <tr>
-                           
-                            <td>${rec.id}</td>
-                            <td>${rec.co}</td>
-                            <td>${rec.name}</td>
-                            <td class="price">${rec.price} 円</td>
-                        </tr>
-                             </c:forEach>
-           </table>   
-            <tr>-------------------------------------------------------------------------------</tr><br>
-            <tr>合計金額　${total} 円</tr><br>
+    <tr>　注文商品　　　　　　　　　　　　　　　　　　　　個数　　　　価格</tr><br>
+     <tr>-----------------------------------------------------------------------------------------</tr><br>
+    <tr>ハワイ　　　　　マカダミアナッツ　　　　　　　　<%=request.getParameter("number1") %>個
+    <% int a = Integer.parseInt(request.getParameter("number1")); %>
+    <% int a1 = a * 1000; %>　　　　
+    <%=a1%>円</tr><br>
+    <tr>アメリカ　　　　キスチョコ　　　　　　　　　　　<%=request.getParameter("number2") %>個
+    <% int b = Integer.parseInt(request.getParameter("number2")); %>
+    <% int b1 = b * 700; %>　　　　
+    <%=b1%>円</tr><br>
+    <tr>イタリア　　　　カントチーニチョコ　　　　　　　<%=request.getParameter("number3") %>個
+    <% int c = Integer.parseInt(request.getParameter("number3")); %>
+    <% int c1 = c * 400; %>　　　　
+    <%=c1%>円</tr><br>
+    <tr>オーストラリア　ティムタムチョコ　　　　　　　　<%=request.getParameter("number4") %>個
+    <% int d = Integer.parseInt(request.getParameter("number4")); %>
+    <% int d1 = d * 400; %>　　　　
+    <%=d1%>円</tr><br>
+    <tr>スイス　　　　　ホワイトアンドゴールドチョコ　　<%=request.getParameter("number5") %>個
+    <% int e = Integer.parseInt(request.getParameter("number5")); %>
+    <% int e1 = e * 3000; %>　　　　
+    <%=e1%>円</tr><br>
+	<tr>-----------------------------------------------------------------------------------------</tr><br>
+	<tr>合計金額　<% int total = a1 + b1 + c1 + d1 + e1; %><%=total%>円</tr><br>
            　<h1><a href="thanks.jsp">購入する</a></h1>
     </body>
     </div>
