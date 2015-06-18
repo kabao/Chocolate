@@ -7,7 +7,9 @@
          <div align="center">
      <h1>輸入手続き　確認</h1>
      <h1>輸入が完了しました。</h1>   
-            
+     
+          <a href="index.html">履歴</a><br>
+          <a href="Review.jsp">レビューを書く</a><br> 
           <a href="Welcome.jsp">ログアウト</a>
             </form>
          </div>

@@ -1,10 +1,12 @@
 package tsuda.choco;
 
 public class Mutter {
-	private String choco;
-	
-	public Mutter(String choco) {
-		this.choco = choco;
+	private String choco1;
+
+	public Mutter (String choco1) {
+		this.choco1 = choco1;
 	}
-	public String getChoco() { return choco; }
+
+	public String getChoco1() { return choco1; }
+	//public String getTotal() { return total; }
 }
