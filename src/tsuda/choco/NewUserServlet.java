@@ -60,11 +60,11 @@ public class NewUserServlet extends HttpServlet{
     	String url = request.getParameter("url");
     	
 
-        LinkData data = new LinkData(name,password);
+    	//LinkData data = new LinkData(name,password);
         PersistenceManagerFactory factory = PMF.get();
         PersistenceManager manager = factory.getPersistenceManager();
         try {
-            manager.makePersistent(data);
+          //  manager.makePersistent(data);
         } finally {
             manager.close();
         }

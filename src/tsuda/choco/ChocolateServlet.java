@@ -18,6 +18,9 @@ public class ChocolateServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
 		
+		//resp.setContentType("text/plain");
+		//resp.getWriter().println("Hello, world");
+		
 		resp.setContentType("text/plain");
 		resp.setCharacterEncoding("UTF-8");
         resp.setContentType("text/html");
@@ -45,18 +48,17 @@ public class ChocolateServlet extends HttpServlet {
         }
 
         
-		//resp.setContentType("text/plain");
-		//resp.getWriter().println("Hello, world");
+		/*
 		
-		//PersistenceManagerFactory factory = PMF.get();
-        //PersistenceManager manager = factory.getPersistenceManager();
-        //resp.setCharacterEncoding("UTF-8");
-        //resp.setContentType("text/html");
-       // req.setCharacterEncoding("utf-8");
-       // String param1 = req.getParameter("name");
-       // PrintWriter out = resp.getWriter();
+		PersistenceManagerFactory factory = PMF.get();
+        PersistenceManager manager = factory.getPersistenceManager();
+        resp.setCharacterEncoding("UTF-8");
+        resp.setContentType("text/html");
+        req.setCharacterEncoding("utf-8");
+        String param1 = req.getParameter("name");
+        PrintWriter out = resp.getWriter();
         
-        /*
+        
         List<LinkData> list = null;
         
         if (param1 == null || param1 ==""){
@@ -74,7 +76,7 @@ public class ChocolateServlet extends HttpServlet {
         String res = "[";
         if (list != null){
             for(LinkData data:list){
-                res += "{name:'" + data.getName() + "',password:'" + data.getPassword() + "'},";
+                res += "{name:'" + data.getName() + "',total:'" + data.getTotal() + "'},";
             }
         }
         res += "]";
