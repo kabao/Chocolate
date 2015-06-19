@@ -18,15 +18,17 @@
             var res = '';
             if (json.length == 1){
                 res += '<tr><td>' + json[0].id +'</td></tr>';
-                res += '<tr><td>' + json[0].title +'</td></tr>';
-                res += '<tr><td>' + json[0].url +'</td></tr>';
-                res += '<tr><td>' + json[0].comment +'</td></tr>';
+                res += '<tr><td>' + json[0].choco1 +'</td></tr>';
+                res += '<tr><td>' + json[0].choco2 +'</td></tr>';
+                res += '<tr><td>' + json[0].choco3 +'</td></tr>';
+                res += '<tr><td>' + json[0].choco4 +'</td></tr>';
+                res += '<tr><td>' + json[0].choco5 +'</td></tr>';
+                res += '<tr><td>' + json[0].total +'</td></tr>';
             } else {
                 for (var i = 0;i < json.length;i++){
-                    res += '<tr><td><a href="javascript:return false;" onclick="getData(' + json[i].id +');">' + json[i].id + '</a></td>';
-                    res += '<td><a href="' + json[i].url + '">' + json[i].title + '</a></td>' +
-                    '<td><a href="edit.html?id=' + json[i].id + '">Edit</td>' +
-                    '<td><a href="del.html?id=' + json[i].id + '">Delete</td></tr>';
+                    
+                    res += '<td><a href="' + json[i].id + '">' + 'マカダミアナッツ:' + json[i].choco1 +'個, キスチョコ:' + json[i].choco2 +'個, カントチーニチョコ:' 
+                    + json[i].choco3 +'個, ティムタムチョコ:' + json[i].choco4 +'個, ホワイトアンドゴールドチョコ:' + json[i].choco5 +'個</a></td></tr>';
                 }
             }
             var obj = document.getElementById("datatable");
@@ -45,5 +47,5 @@
     </table>
     <br>
     <div><a href="/ChocoListFromDB.jsp">商品を購入</a></div>
-    <div><a href="/Welcome.jsp">トップページへ</a></div>
+    <div><a href="/Welcome.jsp">トップへ</a></div>
 </html>

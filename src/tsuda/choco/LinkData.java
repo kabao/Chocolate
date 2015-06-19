@@ -1,29 +1,36 @@
 package tsuda.choco;
 import java.net.URL;
+import java.util.Date;
 
 import javax.jdo.annotations.*;
 
 @PersistenceCapable(identityType = IdentityType.APPLICATION)
 public class LinkData {
-
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
-	public String choco1;
-	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
-	public String choco2;
-	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
-	public String choco3;
-	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
-	public String choco4;
-	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
-	public String choco5;
-	     
+	private Long id;
+	
+	@Persistent
+	private String choco1;
+	
+	@Persistent
+	private String choco2;
+	
+	@Persistent
+	private String choco3;
+	
+	@Persistent
+	private String choco4;
+
+	@Persistent
+	private String choco5;
+	
 	@Persistent
 	private String total;
 	     
 	
 	     
-	 
+	public LinkData(){}
     public LinkData(String choco1,String choco2,String choco3,String choco4,String choco5, String total) {
         super();
         this.choco1 = choco1;
@@ -33,7 +40,13 @@ public class LinkData {
         this.choco5 = choco5;
         this.total = total;
     }
- 
+    public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+   
     public String getChoco1() {
         return choco1;
     }
@@ -75,11 +88,10 @@ public class LinkData {
     }
     
     public String getTotal() {
-        return total;
+    	return total;
     }
- 
     public void setTotal(String total) {
-        this.total = total;
+    	this.total = total;
     }
  
 }

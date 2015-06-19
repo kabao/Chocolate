@@ -39,7 +39,10 @@ public class ChocoStoreServlet extends HttpServlet {
         String res = "[";
         if (list != null){
             for(LinkData data:list){
-                res += "{choco1:'" + data.getChoco1() +"'},";
+                //res += "{choco1:'" + data.getChoco1() +"'},";
+            	res += "{id:" + data.getId() + ",choco1:'" + data.getChoco1() + "',choco2:'" + data.getChoco2() + "',choco3:'" +
+    					data.getChoco3() + "',choco4:'" + data.getChoco4() + 
+    					"',choco5:'" + data.getChoco5() + "',total:'" + data.getTotal() + "'},";
             }
         }
         res += "]";

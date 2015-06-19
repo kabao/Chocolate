@@ -33,8 +33,6 @@ public class AddLinkDataServlet extends HttpServlet {
         String choco4 = req.getParameter("choco4");
         String choco5 = req.getParameter("choco5");
         String total = req.getParameter("total");
-       // String url = req.getParameter("url");
-        //Date date = Calendar.getInstance().getTime();
         LinkData data = new LinkData(choco1,choco2,choco3,choco4,choco5,total);
         PersistenceManagerFactory factory = PMF.get();
         PersistenceManager manager = factory.getPersistenceManager();

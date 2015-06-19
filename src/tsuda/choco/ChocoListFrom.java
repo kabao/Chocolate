@@ -39,7 +39,13 @@ public class ChocoListFrom extends HttpServlet{
 	            throws ServletException, IOException {
 	        request.setCharacterEncoding("UTF-8");
 	        
-	         String choco = request.getParameter("choco");
+	        String choco1 = request.getParameter("choco1");
+	        String choco2 = request.getParameter("choco2");
+	        String choco3 = request.getParameter("choco3");
+	        String choco4 = request.getParameter("choco4");
+	        String choco5 = request.getParameter("choco5");
+	        String total = request.getParameter("total");
+	        
 	         
 	        RequestDispatcher dispatcher = request.getRequestDispatcher("/cartCheckBox.jsp");
 	        dispatcher.forward(request, response);
