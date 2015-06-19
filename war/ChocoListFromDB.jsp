@@ -14,17 +14,12 @@
             
             <h2>お好きな輸入したいチョコを選んでください。</h2>
             
-            <form action="cart.do" method="post">
+            <form action="/add" method="post">
             	<div style="padding: 10px; margin-bottom: 10px; border: 1px dotted #333333;  width: 60%">
                	ハワイ　　　　　マカダミアナッツ　　　　　　　1000円/個　　
                	<br>
                	<img src="choco1.jpg" alt="choco1" width="200" height="100"><br><br>
-               	<input type="radio" name="choco1" value="0" checked="checked"/>0
-				<input type="radio" name="choco1" value="1" />1
-				<input type="radio" name="choco1" value="2" />2
-				<input type="radio" name="choco1" value="3" />3
-				<input type="radio" name="choco1" value="4" />4
-				<input type="radio" name="choco1" value="5" />5個
+               	<td><input type="text" name="choco1" size="16"/></td>個
                	<br>
              	 </div>
                	
@@ -32,12 +27,7 @@
                	アメリカ　　　　キスチョコ　　　　　　　　　　 700円/個　　
                	<br>
               	<img src="choco2.jpg" alt="choco2" width="200" height="100"><br><br>
-               	<input type="radio" name="choco2" value="0" checked="checked"/>0
-				<input type="radio" name="choco2" value="1" />1
-				<input type="radio" name="choco2" value="2" />2
-				<input type="radio" name="choco2" value="3" />3
-				<input type="radio" name="choco2" value="4" />4
-				<input type="radio" name="choco2" value="5" />5個
+              	<td><input type="text" name="choco2" size="16"/></td>個
                	<br>
                	</div>
                	
@@ -45,12 +35,7 @@
                	イタリア　　　　カントチーニチョコ　　　　　　 400円/個　　
                	<br>
                	<img src="choco3.jpg" alt="choco3" width="200" height="100"><br><br>
-               	<input type="radio" name="choco3" value="0" checked="checked"/>0
-				<input type="radio" name="choco3" value="1" />1
-				<input type="radio" name="choco3" value="2" />2
-				<input type="radio" name="choco3" value="3" />3
-				<input type="radio" name="choco3" value="4" />4
-				<input type="radio" name="choco3" value="5" />5個
+               	<td><input type="text" name="choco3" size="16"/></td>個
                	<br>
                	</div>
                	
@@ -58,12 +43,7 @@
                	オーストラリア　ティムタムチョコ　　　　　　　 400円/個　　
                	<br>
                	<img src="choco4.jpg" alt="choco4" width="200" height="100"><br><br>
-               	<input type="radio" name="choco4" value="0" checked="checked"/>0
-				<input type="radio" name="choco4" value="1" />1
-				<input type="radio" name="choco4" value="2" />2
-				<input type="radio" name="choco4" value="3" />3
-				<input type="radio" name="choco4" value="4" />4
-				<input type="radio" name="choco4" value="5" />5個
+               	<td><input type="text" name="choco4" size="16"/></td>個
                	<br>
                	</div>
                	
@@ -71,17 +51,12 @@
                	スイス　　　　　ホワイトアンドゴールドチョコ　3000円/個　　
                	<br>
                	<img src="choco5.jpg" alt="choco5" width="200" height="100"><br><br>
-               	<input type="radio" name="choco5" value="0" checked="checked"/>0
-				<input type="radio" name="choco5" value="1" />1
-				<input type="radio" name="choco5" value="2" />2
-				<input type="radio" name="choco5" value="3" />3
-				<input type="radio" name="choco5" value="4" />4
-				<input type="radio" name="choco5" value="5" />5個
+               	<td><input type="text" name="choco5" size="16"/></td>個
                	<br>
                	</div>
                	
                	<br>
-                <input type="submit" name="cart.do" value="カートの内容を確認して注文へ進む" />
+                <input type="submit" name="go" value="カートの内容を確認して注文へ進む" />
                 <br>
                 <br>                
             </form>

@@ -33,7 +33,7 @@ public class NewChocolateServlet extends HttpServlet{
         }
         else if(action.equals("done")){
             HttpSession session = request.getSession();
-            Mutter chocolate = (Mutter) session.getAttribute("chocolate");
+            LinkData chocolate = (LinkData) session.getAttribute("chocolate");
             session.removeAttribute("chocolate");
             
             forwardPath ="/cartCheckBox.jsp";
@@ -57,20 +57,21 @@ public class NewChocolateServlet extends HttpServlet{
             throws ServletException, IOException {
         //processRequest(request, response);
     	request.setCharacterEncoding("UTF-8");
-    	String choco1 = request.getParameter("choco1");
-    	String choco2 = request.getParameter("choco2");
-    	String choco3 = request.getParameter("choco3");
-    	String choco4 = request.getParameter("choco4");
-    	String choco5 = request.getParameter("choco5");
-    	String total = request.getParameter("total");
-    	String url = request.getParameter("url");
+    	LinkData data = new LinkData();
+    	String choco1 = data.getChoco1();
+    	String choco2 = data.getChoco2();
+    	String choco3 = data.getChoco3();
+    	String choco4 = data.getChoco4();
+    	String choco5 = data.getChoco5();
+    	String total = data.getTotal();
+    	
     	
 
-    	LinkData data = new LinkData(choco1,choco2,choco3,choco4,choco5,total);
+    	LinkData linkdata = new LinkData(choco1,choco2,choco3,choco4,choco5,total);
         PersistenceManagerFactory factory = PMF.get();
         PersistenceManager manager = factory.getPersistenceManager();
         try {
-            manager.makePersistent(data);
+            manager.makePersistent(linkdata);
         } finally {
             manager.close();
         }
