@@ -12,7 +12,6 @@
         
     <form action="import.do" method="post" class="login">
         <a href="/chocolate">ログイン</a><br>
-       	<a href="NewUser.jsp">ユーザー登録</a>
      </form>
         </div>
 </html>
