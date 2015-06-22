@@ -6,7 +6,7 @@
         <title>thanks Page</title>
          <div align="center">
      <h1>レビュー投稿ありがとうございました。</h1>   
-     <div style="padding: 10px; margin-bottom: 10px; border: 1px dotted #333333;  width: 60%">
+     <div style="padding: 10px; margin-bottom: 10px; border: 1px dotted #333333;  width: 40%">
      <%=request.getParameter("name") %>さんのレビュー<br>
     ---------------------------------------<br>
      <%=request.getParameter("comment") %><br>

@@ -27,8 +27,8 @@
             } else {
                 for (var i = 0;i < json.length;i++){
                     
-                    res += '<td><a href="' + json[i].id + '">' + 'マカダミアナッツ:' + json[i].choco1 +'個, キスチョコ:' + json[i].choco2 +'個, カントチーニチョコ:' 
-                    + json[i].choco3 +'個, ティムタムチョコ:' + json[i].choco4 +'個, ホワイトアンドゴールドチョコ:' + json[i].choco5 +'個</a></td></tr>';
+                    res += '<td><a href="' + json[i].id + '">' + 'マカダミアナッツ:' + json[i].choco1 +'個,  キスチョコ:' + json[i].choco2 +'個,  カントチーニチョコ:' 
+                    + json[i].choco3 +'個,  ティムタムチョコ:' + json[i].choco4 +'個,  ホワイトアンドゴールドチョコ:' + json[i].choco5 +'個</a></td></tr>';
                 }
             }
             var obj = document.getElementById("datatable");
@@ -38,7 +38,7 @@
         </script>
   </head>
   <body onload="getData(null);">
-    <h1>データの表示</h1>
+    <h1>購入履歴</h1>
      
     <table id="datatable" border="1">
       <tr>
@@ -46,6 +46,7 @@
       </tr>
     </table>
     <br>
-    <div><a href="/ChocoListFromDB.jsp">商品を購入</a></div>
+     
+     <div><a href="/Review.jsp">レビューを書く</a></div>
     <div><a href="/Welcome.jsp">トップへ</a></div>
 </html>

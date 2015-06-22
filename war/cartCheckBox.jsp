@@ -8,8 +8,8 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Cart Page</title>
     </head>
+     <form action="import.do" method="post">
     <body>
-   
         <h1>ご注文は以下の通りです。</h1>
     <tr>　注文商品　　　　　　　　　　　　　　　　　　　　個数　　　　価格</tr><br>
      <tr>-----------------------------------------------------------------------------------------</tr><br>
@@ -37,5 +37,6 @@
 	<tr>合計金額　<% int total = a1 + b1 + c1 + d1 + e1; %><%=total%>円</tr><br>
            　<input type="submit" name="thanks.jsp" value="購入する" />
     </body>
+    </form>
     </div>
 </html>
