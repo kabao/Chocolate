@@ -80,7 +80,7 @@
                	<br>
                	</div>
                	<br>
-                  <input type="submit" name="go" value="カートの内容を確認して注文へ進む" />
+                  <input type="submit" name="go" value="発注" />
                 <br>
                 <br>                
             </form> 
